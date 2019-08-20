@@ -9,3 +9,8 @@ Score
  - Console
  
 Base library https://github.com/AkinaySau/wp-core 
+
+## Install
+```bash
+composer create-project sau/wp-core-plugin
+```
