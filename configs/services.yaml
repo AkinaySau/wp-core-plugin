@@ -1,0 +1,10 @@
+# Create AkinaySau(akinaysau@gmail.com)
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+
+    Sau\WP\Plugin\Core\:
+        resource: '../src/*'
+        #exclude: '../src/{Kernel.php}'

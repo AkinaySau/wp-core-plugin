@@ -1,0 +1,19 @@
+#!/usr/bin/env php
+<?php
+
+use Sau\WP\Core\Application;
+use Sau\WP\Core\Kernel;
+use Symfony\Component\Console\Input\ArgvInput;
+
+define('SHORTINIT', true);
+
+include_once dirname(__DIR__).'/vendor/autoload.php';
+include_once dirname(__DIR__).'/../../../wp-load.php';
+
+$debug = true;
+
+$kernel = new Kernel(dirname(__DIR__), $debug);
+$input  = new ArgvInput();
+
+$application = new Application($kernel);
+$application->run($input);

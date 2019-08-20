@@ -1,0 +1,31 @@
+{
+	"name": "sau/wp-core-plugin",
+	"license": "MIT",
+	"version": "1.0.0",
+	"authors": [
+		{
+			"name": "Akinay Sau",
+			"email": "akinay.sau@gmail.com",
+			"homepage": "http://sauri.wp",
+			"role": "Developer"
+		}
+	],
+	"require": {
+		"sau/wp-core": "1.0.0",
+		"filp/whoops": "^2.4"
+	},
+	"autoload": {
+		"psr-4": {
+			"Sau\\WP\\Plugin\\Core\\": "src/"
+		}
+	},
+	"repositories": [
+		{
+			"type": "path",
+			"url": "/home/sau/MyProjects/wp-theme-lib",
+			"options": {
+				"symlink": true
+			}
+		}
+	]
+}
