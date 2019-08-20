@@ -1,6 +1,6 @@
 {
 	"name": "sau/wp-core-plugin",
-	"license": "MIT",
+	"license": "BSD-3-Clause",
 	"version": "1.0.0",
 	"authors": [
 		{
@@ -18,14 +18,5 @@
 		"psr-4": {
 			"Sau\\WP\\Plugin\\Core\\": "src/"
 		}
-	},
-	"repositories": [
-		{
-			"type": "path",
-			"url": "/home/sau/MyProjects/wp-theme-lib",
-			"options": {
-				"symlink": true
-			}
-		}
-	]
+	}
 }
