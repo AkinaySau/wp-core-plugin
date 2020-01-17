@@ -1,24 +1,32 @@
 <?php
+/**
+ * Plugin Name: Core Plugin
+ * Plugin URI: http://sauri.pw
+ * Description: Core Plugin
+ * Version: 1.0
+ * Author: Akinay Sau <akinay.sau@gmail.ru>
+ * Author URI: http://sauri.pw
+ * License: MIT
+ * Text Domain: core-plugin
+ * Domain Path: /l10n
+ */
 
-/*
-Plugin Name: Core Plugin
-Plugin URI: http://sauri.pw
-Description: Core Plugin
-Version: 1.0
-Author: sau
-Author URI: http://sauri.pw
-License: MIT
-*/
-
+use Dotenv\Dotenv;
 use Sau\WP\Core\Kernel;
 use Whoops\Handler\PrettyPageHandler;
 use Whoops\Run;
 
 include __DIR__.'/vendor/autoload.php';
-define('TUTMEE_PLUGIN_LANG', 'tutmee');
-if ( ! defined('THEME_LANG')) {
-    define('THEME_LANG', TUTMEE_PLUGIN_LANG);
-}
+(Dotenv::createImmutable(__DIR__))->load();
+
+//Load translate
+add_action(
+    'plugins_loaded',
+    function () {
+        load_plugin_textdomain(getenv('PLUGIN_TEXTDOMAIN'), false, dirname(plugin_basename(__FILE__)).'/l10n/');
+    }
+);
+
 $debug = defined('WP_DEBUG') ? WP_DEBUG : false;
 if ($debug) {
     $whoops = new Run;
