@@ -1,7 +1,7 @@
 {
 	"name": "sau/wp-core-plugin",
 	"license": "BSD-3-Clause",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"authors": [
 		{
 			"name": "Akinay Sau",
@@ -18,5 +18,14 @@
 		"psr-4": {
 			"Sau\\WP\\Plugin\\Core\\": "src/"
 		}
-	}
+	},
+	"repositories": [
+		{
+			"type": "path",
+			"url": "~/MyProjects/wp-core",
+			"options": {
+				"symlink": true
+			}
+		}
+	]
 }
