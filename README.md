@@ -12,5 +12,5 @@ Base library https://github.com/AkinaySau/wp-core
 
 ## Install
 ```bash
-composer create-project sau/wp-core-plugin
+composer create-project sau/wp-core-plugin core-plugin
 ```

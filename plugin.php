@@ -37,6 +37,14 @@ if ($debug) {
 $kernel = new Kernel(__DIR__, $debug);
 $kernel->run();
 
-add_action( 'admin_enqueue_scripts', function () {
-    wp_enqueue_style( 'core-plugin__default',plugin_dir_url(__FILE__) . '/assets/core-plugin__default.css', false, '1.0.0' );
-});
+add_action(
+    'admin_enqueue_scripts',
+    function () {
+        wp_enqueue_style(
+            'core-plugin__default',
+            plugin_dir_url(__FILE__).'/assets/core-plugin__default.css',
+            false,
+            '1.0.0'
+        );
+    }
+);
